@@ -49,7 +49,7 @@ public class ExpressionTree{
       return value;
     }
     else{
-      return apply(getOp(),getRight().evaluate(),getLeft().evaluate());
+      return apply(getOp(),getLeft().evaluate(),getRight().evaluate());
     }
   }
 
@@ -57,16 +57,16 @@ public class ExpressionTree{
   /*use the correct operator on both a and b, and return that value*/
   private double apply(char op, double a, double b){
     if (op == '*'){
-      return a * b;
+      return (double) a * b;
     }
     if (op == '/'){
-      return a/b;
+      return (double) a/b;
     }
     if (op == '+'){
-      return  a+b;
+      return  (double) a+b;
     }
     else{
-      return a-b;
+      return (double) a-b;
     }
   }
 
