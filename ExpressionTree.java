@@ -28,8 +28,16 @@ public class ExpressionTree{
   /* The sample tree would be: "+ 3 * 2 10"     */
 
   public String toStringPrefix(){
-    /*you are to write this method*/
-    return "";
+    String str = "";
+    if(isValue()){
+      return getValue() + " ";
+    }
+    else{
+      str+= getOp() + " ";
+      str+= getLeft().toStringPostfix() + " ";
+      str+= getRight().toStringPostfix();
+    }
+    return str;
   }
 
 
