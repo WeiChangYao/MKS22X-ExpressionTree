@@ -10,9 +10,11 @@ public class ExpressionTree{
       return getValue() + " ";
     }
     else{
-      str+= getLeft().toStringPostfix() + " ";
+      str+="(";
+      str+= getLeft().toString() + " ";
       str+= getOp() + " ";
-      str+= getRight().toStringPostfix();
+      str+= getRight().toString();
+      str+=")";
     }
     return str;
   }
