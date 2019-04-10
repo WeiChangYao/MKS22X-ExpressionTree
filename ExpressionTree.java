@@ -44,8 +44,8 @@ public class ExpressionTree{
     }
     else{
       str+= getOp() + " ";
-      str+= getLeft().toStringPostfix() + " ";
-      str+= getRight().toStringPostfix();
+      str+= getLeft().toStringPrefix() + " ";
+      str+= getRight().toStringPrefix();
     }
     return str;
   }
